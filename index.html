@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0%;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            background-color: darkblue;
+            
+        }
+        .child{
+            text-align: center;
+            height:fit-content;
+            width: 500px;
+            position: relative;
+            left: 35%;
+            padding: 30px;
+        }
+        .child h1{
+            color: white;
+            margin: 0%;
+            padding: 50px 0px;
+        }
+        .child>p{
+            color: white;
+            font-size: 30px;
+
+        }
+        .sry{
+            color: darkblue;
+            padding: 30px;
+            font-size: 50px;
+            background-color: white;
+            border-top-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+        .sry>p{
+            animation: waviy 1s infinite;
+            animation-delay: calc(.1s * var(--i));
+        }
+        @keyframes waviy {
+            0%,40%,100% {
+                transform: translate(0px);
+                
+            }
+            20% {
+                transform: translateY(-20px);
+                background-color: white;
+                color: darkblue;
+            }
+        }
+        audio{
+            padding: 20px;
+        }
+        @media screen and (max-width:450px) {
+            .container{
+                height: 100vh;
+            }
+            .child{
+                text-align: center;
+                height:auto;
+                width: 300px;
+                margin: 0%;
+                position: relative;
+                left: 0%;
+            }
+            .sry{
+                padding: 30px 0px;
+            }
+            .sry>p{
+                font-size: 40px;
+            }
+        }
+    </style>
+    <title>Sry</title>
+</head>
+<body>
+    <div class="container">
+        <div class="child">
+            <h1>Hey ! Jay Balwani's Assistant Here</h1>
+            <div class="sry">
+                <p>Sorry &#128578; </p>
+            </div>
+            <p>Play below audio</p>
+            <audio src="sry.mp3" controls></audio>
+        </div>
+        
+    </div>
+</body>
+</html>
